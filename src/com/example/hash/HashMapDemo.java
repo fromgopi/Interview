@@ -13,7 +13,7 @@ public class HashMapDemo {
 		hashMap.put(7, 1542);
 		//hashMap.put("asdasdasdasd", 55224444);
 		String s = "sriniG";
-		
+		hashMap.display();
 		System.out.println(s.hashCode());
 		hashMap.get(s);
 		/*hashMap.display();

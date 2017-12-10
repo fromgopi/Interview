@@ -1,5 +1,9 @@
 package com.example.sorting;
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,9 +28,23 @@ public class MergeSortDemo {
 		MergeSort ms = new MergeSort();
 		long st = System.currentTimeMillis();
 		ms.mergeSort(a, temp, low, high);
+		System.out.println("Writing thr output to a file....");
+		try {
+			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Merge.txt"));
+			for(int i=0;i<n-1;i++) {
+				bufferedWriter.write(a[i]+",");
+				bufferedWriter.newLine();
+			}
+			bufferedWriter.flush();
+			bufferedWriter.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		long et = System.currentTimeMillis();
 		
-		System.out.println("Time take to sort -> "+ ((et-st))+"MS");
+		System.out.println("Time take to sort and to write to file -> "+ ((et-st))+"MS");
+		sc.close();
 		/*
 		for(int w=0;w<=a.length-1;w++){
 			System.out.print(a[w] + ",");
