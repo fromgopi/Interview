@@ -1,9 +1,5 @@
 package com.example.basics;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
 
 public class ExceptionDemo {
 
@@ -11,9 +7,12 @@ public class ExceptionDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int x = 10;
+		int b = 2;
 		try {
-			FileReader fr = new FileReader("abc.txt");
-		} catch (FileNotFoundException e) {
+			char ch = 'g';
+			System.out.println();
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

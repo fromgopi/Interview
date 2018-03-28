@@ -10,9 +10,11 @@ public class LinkedListDemo {
 		ll.add(4);
 		ll.add(100);
 		ll.add(32);
-		InsertSort is = new InsertSort();
-		Node out = is.sort(ll.head);
-		ll.printList(out);
+		ll.add(343);
+
+		Node test = ll.reverseList(ll.head);
+
+		ll.printList(test);
 	}
 
 }
