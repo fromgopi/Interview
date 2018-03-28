@@ -21,16 +21,37 @@ public class LinkedList {
 		//printList();
 	}
 	
-	void addAtPos(int data, int pos){
+	Node addAtPos(int data, int pos){
 		Node current = new Node(data);
-		//Node d = head;
 		Node temp = head;
-		for(int i=0;i<pos-1;i++){
-			temp = temp.next;
+		if(head == null){
+			current.next = head;
+			head = current;
+			return current;
 		}
-		current.next = temp.next;
-		temp.next = current;
-		
+
+		if(pos == 0){
+			current.next = temp;
+			temp = current;
+			return temp;
+		}
+
+		int i=1;
+		while (i < pos && temp.next != null){
+			temp = temp.next;
+			i++;
+		}
+		if(temp.next != null){
+			current.next = temp.next;
+			temp.next = current;
+		}else {
+			temp.next = current;
+		}
+
+
+		return temp;
+
+
 	}
 
 		void printList(Node head) {
@@ -103,7 +124,7 @@ public class LinkedList {
 		
 	}
 	
-	void ReverseLinkedList(Node head){
+	Node ReverseLinkedList(Node head){
 		Stack<Node> s = new Stack<Node>();
 		Node ptr = head;
 		while(ptr != null){
@@ -117,6 +138,8 @@ public class LinkedList {
 			head =s.pop();
 			head = head.next;
 		}
+
+		return head;
 	}
 	
 }

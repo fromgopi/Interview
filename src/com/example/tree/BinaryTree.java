@@ -115,4 +115,35 @@ public class BinaryTree {
 			}
 		}
 	}
+
+	void insert(int data){
+		Queue<Node> queue = new LinkedList<Node>();
+		Node temp = root;
+		Node newNode = new Node(data);
+		queue.add(temp);
+
+		while(!queue.isEmpty()){
+			temp = queue.peek();
+			queue.remove();
+			if(temp == null){
+				root = newNode;
+				break;
+			}
+			//For left sub-Tree.
+			if(temp.left == null){
+				temp.left  = new Node(data);
+				break;
+			}else{
+				queue.add(temp.left);
+			}
+
+			if(temp.right == null){
+				temp.right = new Node(data);
+				break;
+			}else {
+				queue.add(temp.right);
+			}
+		}
+
+	}
 }

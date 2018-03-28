@@ -10,7 +10,7 @@ public class BuildTreeDemo {
 		int is = 0;
 		int end = inOrder.length-1;
 		Node out = bt.build(inOrder, preOrder, is, end);
-		//bt.printInOrder(out);
+		bt.printInOrder(out);
 	}
 
 }

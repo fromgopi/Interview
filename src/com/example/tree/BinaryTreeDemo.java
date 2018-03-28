@@ -10,6 +10,20 @@ public class BinaryTreeDemo {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		BinaryTree bt = new BinaryTree();
+
+		bt.insert(2);
+		bt.insert(4);
+		bt.insert(3);
+		bt.insert(5);
+		bt.insert(6);
+		bt.insert(12);
+		bt.insert(14);
+		bt.insert(1);
+		bt.insert(8);
+		bt.insert(9);
+
+
+		/*
 		LeastCommonAncestor l = new LeastCommonAncestor();
 		Node out;
 		bt.addNode(7);
@@ -23,7 +37,7 @@ public class BinaryTreeDemo {
 		LeafNodeCount lc = new LeafNodeCount();
 //		System.out.println(lc.count(bt.root));
 		System.out.println(lc.leafcount(bt.root));
-		/*//bt.addNode(1);
+		//bt.addNode(1);
 		SpiralTraversal sp = new SpiralTraversal();
 		sp.traverse(bt.root,0);
 		InOrder io = new InOrder();
