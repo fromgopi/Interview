@@ -10,7 +10,8 @@ public class TrieDemo {
         t.insert("god");
         t.insert("good");
 
-        t.printTrie();
+        TrieNode res = t.searchNode("go");
+        System.out.println(res.endOfWord);
     }
 
 }

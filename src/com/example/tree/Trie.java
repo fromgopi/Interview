@@ -39,6 +39,7 @@ public class Trie {
         for(int i=0;i<len;i++){
             char c = str.charAt(i);
             current = current.children.get(c);
+            System.out.println(current.children.get(c));
             if(current == null){
                 break;
             }

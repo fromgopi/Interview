@@ -33,7 +33,7 @@ public class Heap {
 		// TODO Auto-generated method stub
 		System.out.println("Heap Array...");
 		for(int i=0;i<a.length;i++){
-			System.out.print(heapArray[i] + "");
+			System.out.print(heapArray[i] + ",");
 		}
 		System.out.println();
 	}
