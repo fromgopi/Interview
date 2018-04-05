@@ -2,7 +2,7 @@
 * @author
  * */
 
-package com.example.com.example.general;
+package com.example.general;
 
 import java.util.LinkedList;
 import java.util.List;
