@@ -1,4 +1,4 @@
-package com.example.com.example.general;
+package com.example.general;
 
 import java.util.List;
 
