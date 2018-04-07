@@ -1,4 +1,4 @@
-package com.example.general;
+package com.example.dynamicprogramming;
 
 
 

@@ -1,4 +1,4 @@
-package com.example.general;
+package com.example.dynamicprogramming;
 
 public class FibonacciSeries {
 
