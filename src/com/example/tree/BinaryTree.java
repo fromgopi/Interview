@@ -105,7 +105,7 @@ public class BinaryTree {
 			q.add(root);
 			while(!q.isEmpty()){
 				Node temp = q.remove();
-				//System.out.println(temp.data);
+				System.out.println(temp.data);
 				if(temp.left != null){
 					q.add(temp.left);
 				}

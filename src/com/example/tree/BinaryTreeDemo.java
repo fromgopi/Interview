@@ -20,7 +20,28 @@ public class BinaryTreeDemo {
 		bt.insert(14);
 		bt.insert(1);
 		bt.insert(8);
-		bt.insert(9);
+		/*bt.insert(9);
+		bt.insert(44);
+		bt.insert(45);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);
+		bt.insert(49);*/
+
+		/*MaxHeight maxHeight = new MaxHeight();
+
+		int res = maxHeight.find(bt.root);
+		System.out.println("res = " + res);*/
+
+		bt.levelOrder(bt.root);
 
 
 		/*
