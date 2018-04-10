@@ -20,6 +20,7 @@ public class MaxHeight {
 			level++;
 			while(nodeCount > 0){
 				Node temp = q.remove();
+				System.out.println("temp.data = " + temp.data);
 				if(temp.left != null){
 					q.add(temp.left);
 				}
