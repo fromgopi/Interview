@@ -5,28 +5,25 @@ import java.util.Stack;
 public class Palindrom {
 
 	boolean checkPalindrom(Node head){
-		if(head == null){
-			return false;
+		Node fast = head, slow = head;
+		while (fast != null && fast.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
 		}
-		Node sp = head;
-		Node fp = head;
-		while(fp != null && fp.next != null){
-			fp = fp.next.next;
-			sp = sp.next;
+		if (fast != null) { // odd nodes: let right half smaller
+			slow = slow.next;
 		}
-		if(fp != null){
-			sp = sp.next;
-		}
-		sp = reverse(sp);
-		fp = head;
-		while(fp != null){
-			if(fp.data == sp.data){
-				return true;
+		slow = reverse(slow);
+		fast = head;
+
+		while (slow != null) {
+			if (fast.data != slow.data) {
+				return false;
 			}
-			fp = fp.next;
-			sp = sp.next;
+			fast = fast.next;
+			slow = slow.next;
 		}
-		return false;
+		return true;
 	}
 
 	private Node reverse(Node sp) {
@@ -39,6 +36,6 @@ public class Palindrom {
 			prev = temp;
 			temp = next;
 		}
-		return null;
+		return temp;
 	}	
 }

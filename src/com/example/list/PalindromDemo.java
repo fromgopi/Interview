@@ -6,12 +6,14 @@ public class PalindromDemo {
 		// TODO Auto-generated method stub
 		LinkedList ll = new LinkedList();
 		ll.add(1);
-		ll.add(2);
+		ll.add(0);
+		ll.add(0);
 		ll.add(1);
-		ll.add(2);
-		ll.add(1);
+		ll.add(0);
+		ll.add(0);
+		ll.add(0);
 		Palindrom p = new Palindrom();
-		p.checkPalindrom(ll.head);
+		System.out.println(p.checkPalindrom(ll.head));
 	}
 
 }
