@@ -52,6 +52,9 @@ public class HashMap<K, V> {
 		// TODO Auto-generated method stub
 		//System.out.println("Hash Code = " + newKey.hashCode());
 		int h = (newKey.hashCode())%cap;
+
+		System.out.println("h = " + h);
+
 		if(h < 0){
 			return h*(-1);
 		}
