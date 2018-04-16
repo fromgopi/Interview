@@ -81,4 +81,31 @@ public class BinaryTreePathSum {
         curArray.remove(curArray.size()-1);
     }
 
+    boolean findPath(Node root, int sum){
+
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty() && root != null){
+
+            Node current = stack.pop();
+            if(current.left == null &&  current.right == null){
+                if (current.data == sum){
+                    return true;
+                }
+            }
+
+            if (current.right != null){
+                current.right.data = current.data + current.right.data;
+                stack.push(current.right);
+            }
+
+            if(current.left != null){
+                current.left.data = current.data + current.left.data;
+                stack.push(current.left);
+            }
+
+        }
+        return false;
+    }
+
 }
