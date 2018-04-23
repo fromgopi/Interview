@@ -32,7 +32,7 @@ public class MergeSortDemo {
 		try {
 			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Merge.txt"));
 			for(int i=0;i<n-1;i++) {
-				bufferedWriter.write(a[i]+",");
+				bufferedWriter.write(a[i]);
 				bufferedWriter.newLine();
 			}
 			bufferedWriter.flush();
