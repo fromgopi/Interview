@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Permutation {
 
-    List<List<Integer>> permutation(int[] nums){
+    int permutation(int[] nums){
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
-        if (nums.length ==0) return ans;
+        if (nums.length ==0) return ans.size();
         List<Integer> l0 = new ArrayList<Integer>();
         l0.add(nums[0]);
         ans.add(l0);
@@ -23,6 +23,6 @@ public class Permutation {
             }
             ans = new_ans;
         }
-        return ans;
+        return ans.size();
     }
 }
