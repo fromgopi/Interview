@@ -9,39 +9,30 @@ public class KthLargest {
 			minHeap[i] = a[i];
 		}
 		buildHeap(minHeap, k);
-		for(int i=k;i<len;i++){
+		/*for(int i=k;i<len;i++){
 			if(a[i] > minHeap[0]){
 				minHeap[0] = a[i];
 				minHeapify(minHeap, k, 0);
 			}
-		}
+		}*/
 		return minHeap[0];
 	}
 
 	private void buildHeap(int[] minHeap, int k) {
 		// TODO Auto-generated method stub
 		for(int i=k/2;i>=0;i--){
-			minHeapify(minHeap, k, i);
+			buildMinHeap(minHeap, k, i);
 		}
 	}
 
-	private void minHeapify(int[] minHeap, int k, int i) {
-		// TODO Auto-generated method stub
+	private void buildMinHeap(int[] minHeap, int k, int i) {
+
 		int left = (2*i)+1;
 		int right = (2*i)+2;
-		int smallest = i;
-		if(left < k && minHeap[left] < minHeap[smallest]){
-			smallest = left;
-		}
-		if(right < k && minHeap[right] < minHeap[smallest]){
-			smallest = right;
-		}
-		
-		if(smallest != i){
-			int temp = minHeap[i];
-			minHeap[i] = minHeap[smallest];
-			minHeap[smallest] = temp;
-			minHeapify(minHeap, k, smallest);
-		}
+		System.out.println("left = " + minHeap[left]);
+		System.out.println("right = " + minHeap[right]);
+
 	}
+
+
 }
