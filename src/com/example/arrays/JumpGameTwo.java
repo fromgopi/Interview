@@ -11,6 +11,8 @@ public class JumpGameTwo {
             int preHigh = high;
             for(int t = preLow;t <= preHigh;t++)
                 high = Math.max(t+nums[t], high);
+                System.out.println("high = " + high);
+            System.out.println("preHigh = " + preHigh);
             low = preHigh+1;
             step++;
         }
