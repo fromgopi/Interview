@@ -15,7 +15,6 @@ public class LevelOrder {
 		}
 		Queue<Node> q = new LinkedList<Node>();
 		q.add(root);
-		/*System.out.println("At level "+level +"The elements are " + root.data);*/
 		while(!q.isEmpty()){
 			List<Integer> level = new LinkedList<Integer>();
 			Node temp = q.remove();

@@ -2,6 +2,7 @@ package com.example.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class MaxHeight {
 
@@ -31,6 +32,29 @@ public class MaxHeight {
 			}
 		}
 		
+	}
+
+
+
+	int findHeight(Node root){
+		int nodecount=0;
+		if(root.left == null || root.right ==  null){
+			return 0;
+		}
+
+		Queue<Node> q = new LinkedList<>();
+
+		q.add(root);
+		while(!q.isEmpty()){
+
+			nodecount = q.size();
+			Node temp = q.remove();
+			if(temp.left != null){
+
+			}
+		}
+
+		return 0;
 	}
 
 }
