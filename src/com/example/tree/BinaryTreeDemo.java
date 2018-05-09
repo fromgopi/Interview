@@ -11,8 +11,8 @@ public class BinaryTreeDemo {
 		Scanner sc = new Scanner(System.in);
 		BinaryTree bt = new BinaryTree();
 
+		bt.insert(1);
 		bt.insert(2);
-		bt.insert(4);
 		bt.insert(3);
 		bt.insert(5);
 		bt.insert(6);
@@ -20,6 +20,7 @@ public class BinaryTreeDemo {
 		bt.insert(14);
 		bt.insert(1);
 		bt.insert(8);
+
 		/*bt.insert(9);
 		bt.insert(44);
 		bt.insert(45);

@@ -10,14 +10,16 @@ public class BFS {
 		Queue<Integer> q = new LinkedList<Integer>();
 		q.add(start);
 		visted[start] = true;
-		System.out.println(start);
+		System.out.println("Start = " +start);
 		while(!q.isEmpty()){
 			int n = q.peek();
+			System.out.println("peek = " + n);
 			int neighbour = getUnvistiedVertex(a, n, visted);
+			System.out.println("neighbours for peek = " + neighbour);
 			if(neighbour > 0){
 				q.add(neighbour);
 				visted[neighbour] = true;
-				System.out.println(neighbour);
+				System.out.println("Added to Queue = " + neighbour);
 			}
 			else{
 				q.remove();

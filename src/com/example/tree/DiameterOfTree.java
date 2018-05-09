@@ -2,21 +2,27 @@ package com.example.tree;
 
 public class DiameterOfTree {
 
-    public int diameter(Node root){
-        int max = maxDepth(root);
-        return max;
-
+    int diameter(Node root){
+        if (root == null){
+            return  -1;
+        }
+        int ans[] = new int[]{Integer.MIN_VALUE};
+        helper(root, ans);
+        return ans[0] - 1;
     }
 
-    private int maxDepth(Node root) {
-        int max=0;
-        if(root == null) return 0;
+    private int helper(Node root, int[] ans) {
 
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
+        if(root == null){
+            return -1;
+        }
+        int left = helper(root.left, ans);
+        int right = helper(root.right, ans);
 
-        max = Math.max(max, (left+right));
-        return max;
+        ans[0] = Math.max(ans[0], left + right + 1);
+
+        return Math.max(left, right) + 1;
+
     }
 
 }
