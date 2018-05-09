@@ -29,6 +29,10 @@ public class Digraph {
 	void addEdge(int start, int end){
 		adj[start][end] = 1;
 	}
+
+	void printVertex(){
+
+	}
 	
 	void displayVertex(int v){
 		System.out.println(vertexList[v].num);
