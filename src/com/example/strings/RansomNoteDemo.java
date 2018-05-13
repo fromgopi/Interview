@@ -5,7 +5,7 @@ public class RansomNoteDemo {
     public static void main(String[] args) {
 
         String magazine = "give me one grand today night give me ";
-        String note = "Gopi";
+        String note = "give";
 
         RansomNote ransomNote = new RansomNote();
 
