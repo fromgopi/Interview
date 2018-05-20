@@ -1,5 +1,7 @@
 package com.example.tree;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 public class DFSOnTree {
@@ -31,5 +33,29 @@ public class DFSOnTree {
 		dfsOnTree(root.left);
 		dfsOnTree(root.right);
 		
+	}
+
+	List<List<Integer>>dFs(Node root){
+		List<List<Integer>> result = new LinkedList<List<Integer>>();
+
+		if(root == null){
+			return result;
+		}
+		Stack<Node> stack = new Stack<>();
+
+		stack.push(root);
+		while(!stack.isEmpty()){
+			List<Integer> temp = new LinkedList<>();
+			Node current = stack.pop();
+			temp.add(current.data);
+			if(current.right != null){
+				stack.push(current.right);
+			}
+			if(current.left != null){
+				stack.push(current.left);
+			}
+			result.add(temp);
+		}
+		return result;
 	}
 }
