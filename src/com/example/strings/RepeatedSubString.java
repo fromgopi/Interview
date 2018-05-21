@@ -1,6 +1,6 @@
 package com.example.strings;
 
-public class RepeatedSubString {
+public class  RepeatedSubString {
 
 	int find(String s){
 		char ch[] = new char[26];
