@@ -17,8 +17,8 @@ public class HashMapDemo {
 		System.out.println(s.hashCode());
 		hashMap.get(s);
 		hashMap.get(s);
-		/*hashMap.display();
-		hashMap.remove(4);
+		hashMap.display();
+		/*hashMap.remove(4);
 		System.out.println("After deleting....");
 		hashMap.display();*/
 		
