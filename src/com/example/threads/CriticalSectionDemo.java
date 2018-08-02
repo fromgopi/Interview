@@ -8,7 +8,7 @@ public class CriticalSectionDemo {
 		Thread t1 = new Thread();
 		t1.setDaemon(true);
 		t1.start();
-		
+
 		c.add(33);
 	}
 
