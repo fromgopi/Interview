@@ -7,16 +7,14 @@ public class AnimalTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Cat cat = new Cat();
-		Animal animal = cat;
-		Animal animal2 = new Animal();
+
+		Animal animal = new Cat();
+		//Out put for the bellow method is cat is eating...
 		animal.eat();
-		animal2.eat();
-		List<Object> list = new ArrayList<Object>();
-		list.add(animal);
-		
-		System.out.println();
-		
+		Animal animal1 = new Animal();
+		//Output for the bellow method is Animal is eating ...
+		animal1.eat();
+
 	}
 
 }
