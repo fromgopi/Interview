@@ -29,7 +29,9 @@ public class MatrixDemo {
 			}
 			System.out.println();
 		}
-		SetZeros sz = new SetZeros();
+
+
+		/*SetZeros sz = new SetZeros();
 		int[][] out = sz.setZeros(input);
 		System.out.println("The array is ");
 		for(int i=0;i<out.length;i++){
@@ -37,7 +39,7 @@ public class MatrixDemo {
 				System.out.print(out[i][j] + " ");
 			}
 			System.out.println();
-		}
+		}*/
 	}
 
 }
