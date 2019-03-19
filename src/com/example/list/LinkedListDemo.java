@@ -14,7 +14,7 @@ public class LinkedListDemo {
 
 		Node test = ll.reverseList(ll.head);
 
-		ll.printList(test);
+		LinkedList.printList(test);
 	}
 
 }

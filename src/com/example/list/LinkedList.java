@@ -54,7 +54,7 @@ public class LinkedList {
 
 	}
 
-		void printList(Node head) {
+		public static void printList(Node head) {
 		// TODO Auto-generated method stub
 		Node t = head;
 		while(t != null){
@@ -140,6 +140,15 @@ public class LinkedList {
 		}
 
 		return head;
+	}
+
+	public static int getListLength(Node head){
+		int len = 0;
+		while (head.next != null){
+			len++;
+			head = head.next;
+		}
+		return len;
 	}
 	
 }
