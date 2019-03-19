@@ -39,8 +39,14 @@ public class StringSearch {
         }
     }
 
-    void searchStringUsingRegex(String searchKey){
-        String statement = "Hello this method uses ";
-        System.out.println(statement.matches("^this"));
+    void searchStringUsingRegex(String searchKey, Scanner scanner){
+        int occurrence = 0;
+        while (scanner.hasNext()){
+            String line = scanner.next();
+            if(line.matches(".*[a-zA-Z].*")){
+                occurrence++;
+            }
+        }
+        System.out.println("Count of " + searchKey + " in file " + occurrence);
     }
 }

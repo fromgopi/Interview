@@ -31,10 +31,10 @@ public class StringSearchDemo {
 
             }
             if(method == 2){
-                /*sc = new Scanner(new File("french_armed_forces.txt"));
+                sc = new Scanner(new File("french_armed_forces.txt"));
                 int searchCount = stringSearch.searchString(search, sc);
-                System.out.println("French_armed_forces.txt - " + searchCount + " matches");*/
-                stringSearch.searchStringUsingRegex("");
+                System.out.println("French_armed_forces.txt - " + searchCount + " matches");
+                stringSearch.searchStringUsingRegex(search, sc);
             }
             if(method == 3){
                 sc = new Scanner(new File("french_armed_forces.txt"));

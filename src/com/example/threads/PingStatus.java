@@ -24,7 +24,7 @@ public class PingStatus {
 		for(int i=0;i<hostList.length;i++){
 			String url = hostList[i];
             Runnable worker1 = new MyRunnable(url);
-            executor.execute(worker1);
+            executor. execute(worker1);
             /*Thread worker = new Thread(new MyRunnable(url));
             worker.run();*/
 			}
