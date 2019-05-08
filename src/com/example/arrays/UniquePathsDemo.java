@@ -15,7 +15,17 @@ public class UniquePathsDemo {
         boolean visted[][] = new boolean[length][length];
         int count = 0;
 
-        System.out.println(up.exhaustPaths(maze, 0, 0, visted, count));
+        up.exhaustPaths(maze, 0, 0, visted, count);
+
+        up.uniquePaths(40, 5);
+
+        int maz[][] = {
+                { 1, 0, 1},
+                { 1, 1, 1},
+                { 0, 1, 1}
+        };
+
+        System.out.println(up.uniquePaths(maz));
 
     }
 }

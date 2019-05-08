@@ -3,7 +3,7 @@ package com.example.arrays;
 public class MakeSpiralDemo {
 
     public static void main(String[] args) {
-        int spiralLength = 10;
+        int spiralLength = 3;
 
         MakeSpiral make = new MakeSpiral();
 

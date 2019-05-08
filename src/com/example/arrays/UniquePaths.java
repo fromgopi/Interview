@@ -1,5 +1,7 @@
 package com.example.arrays;
 
+import java.util.Stack;
+
 public class UniquePaths {
 
     int exhaustPaths(int[][] maze, int x, int y, boolean[][] visited, int count){
@@ -17,7 +19,7 @@ public class UniquePaths {
             if((x+1 < length) && !visited[x+1][y]){
                 count = exhaustPaths(maze, x+1, y, visited, count);
             }
-            // Go down from the give position (x,y) -> (x+1,y)
+            // Go Up from the give position (x,y) -> (x+1,y)
             if((x-1 >= 0) && !visited[x-1][y]){
                 count = exhaustPaths(maze, x-1, y, visited, count);
             }
@@ -43,5 +45,39 @@ public class UniquePaths {
         }
 
         return true;
+    }
+
+
+    int uniquePaths(int m, int n){
+
+        int[][] res = new int[m][n];
+
+        for (int i=0; i< m; i++){
+            for (int j=0; j < n; ++j){
+                if(i == 0 || j == 0){
+                    res[i][j] = 1;
+                } else {
+                    res[i][j] = res[i-1][j] + res[i][j-1];
+                }
+            }
+        }
+        return res[m-1][n-1];
+    }
+
+
+    int uniquePaths(int[][] obstacleGrid){
+
+        Stack<Integer> stack = new Stack<>();
+
+        int start = 0, end=0;
+        stack.push(start);
+        while (stack.isEmpty()){
+            int pos = stack.peek();
+            if(obstacleGrid[start+1][end] == 1){
+                stack.push(start+1);
+            }
+        }
+
+        return 0;
     }
 }
