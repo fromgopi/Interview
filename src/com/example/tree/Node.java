@@ -6,7 +6,7 @@ public class Node {
 	Node left;
 	Node right;
 	
-	Node(int d){
+	public Node(int d){
 		this.data = d;
 		this.left = null;
 		this.right = null;
