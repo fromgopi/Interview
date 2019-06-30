@@ -8,8 +8,8 @@ public class HeapDemo {
 		int a[] = {1,2,3,4,7,8,9,10,14,16};
 		h.heapArray = a;
 		h.maxHeap(h.heapArray);
-		double x = 3.14585;
-		System.out.println(Math.floor(x));
+		double x = 3.44585;
+		System.out.println(Math.round(x));
 	}
 
 }

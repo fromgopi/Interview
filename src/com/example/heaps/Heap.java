@@ -16,6 +16,7 @@ public class Heap {
 		return (index-1)/2;
 	}
 	int getLeftIndex(int index){
+
 		return (2*index) + 1;
 	}
 	int getRightIndex(int index){
@@ -39,8 +40,11 @@ public class Heap {
 	}
 	private void maxHeapify(int[] a, int i) {
 		// TODO Auto-generated method stub
+		System.out.println("Max Heapify is called.");
 		int left = getLeftIndex(i);
+		System.out.println("Left Index -> " + left);
 		int right = getRightIndex(i);
+		System.out.println("Right Index -> " + right);
 		int largest = i;
 		
 		if(left < a.length && a[left] > a[largest]){
