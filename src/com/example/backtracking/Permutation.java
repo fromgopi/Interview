@@ -23,6 +23,7 @@ public class Permutation {
             }
             ans = new_ans;
         }
+        System.out.println(ans);
         return ans.size();
     }
 }
