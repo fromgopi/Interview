@@ -12,7 +12,7 @@ public class BinaryTree {
 	Node root;
 	Stack<Node> s = new Stack<Node>();
 	
-	void addNode(int data){
+	public void addNode(int data){
 		Node newNode = new Node(data);
 		if(root == null){
 			root = newNode;

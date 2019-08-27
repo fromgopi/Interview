@@ -2,6 +2,7 @@ package com.example.tree;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class BinaryTreePath {
 
@@ -28,6 +29,26 @@ public class BinaryTreePath {
         }
 
         return paths;
+    }
+
+    boolean hasPathSum(Node root, int sum){
+
+        if (root.data == sum){
+            return true;
+        }
+
+        Stack<Node> s = new Stack<>();
+        s.push(root);
+        while (!s.isEmpty()){
+            Node temp = s.pop();
+
+            if(temp.right != null){
+                s.push(temp.right);
+            }
+
+        }
+
+        return false;
     }
 
 }
