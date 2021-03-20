@@ -8,5 +8,12 @@ public class PrintArray {
         }
         System.out.println();
     }
+
+    public static void printArray(String[] array){
+        for (String string : array) {
+            System.out.print(string + " ");
+        }   
+        System.out.println();
+    }
     
 }
