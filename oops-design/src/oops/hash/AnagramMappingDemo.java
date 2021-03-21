@@ -11,7 +11,7 @@ public class AnagramMappingDemo {
         AnagramMapping obj = new AnagramMapping();
         int[] result = obj.mapping(A, B);
         int[] res = obj.mappingWithLoops(A, B);
-        
+        PrintArray.printArray(result);
         PrintArray.printArray(res);
 
     }
