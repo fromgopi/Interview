@@ -7,7 +7,7 @@ public class Surveillance extends CheckList implements AlarmListener{
         byTheNumbers();
     }
 
-    protected void isolate() {
+    protected void isolate() { 
         System.out.println("   train the cameras");
     }
 }
