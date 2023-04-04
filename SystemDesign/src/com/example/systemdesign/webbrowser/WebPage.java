@@ -7,7 +7,7 @@ public class WebPage {
     private int visitCount;
     
 
-
+ 
     WebPage(String url){
         this.url = url;
         this.visitCount = 0;
