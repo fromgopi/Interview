@@ -1,5 +1,6 @@
 package com.example.systemdesign.webbrowser;
 
+
 public class WebPage {
 
     private String url;
