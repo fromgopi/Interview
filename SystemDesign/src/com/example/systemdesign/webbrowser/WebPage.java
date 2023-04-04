@@ -28,6 +28,7 @@ public class WebPage {
     public void setVisitCount(int visitCount) {
         this.visitCount = visitCount;
     }
+    
 
     public void visted(){
         this.visitCount++;
