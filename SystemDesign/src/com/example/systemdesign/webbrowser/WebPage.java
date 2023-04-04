@@ -5,6 +5,7 @@ public class WebPage {
 
     private String url;
     private int visitCount;
+    
 
 
     WebPage(String url){
