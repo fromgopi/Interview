@@ -18,4 +18,3 @@ The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More detail
 
 
 
-
